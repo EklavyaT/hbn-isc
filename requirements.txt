@@ -1,0 +1,30 @@
+# Python 3.11.15
+# Versions below are the ones the manuscript analyses were run under.
+# Pinned exactly, because MNE and MNE-ICALabel behavior can shift across
+# minor versions in ways that change ICA component labels.
+
+# Core EEG processing
+mne==1.12.0
+pyprep==0.6.0
+mne-icalabel==0.8.1
+
+# Scientific stack
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+statsmodels==0.14.6
+matplotlib==3.10.8
+
+# Encoding model (Figure 5B) only. Not needed for the ISC pipeline,
+# the tables, or Figures 2, 3, 4, S1 to S5.
+torch==2.11.0
+transformers==5.7.0
+librosa==0.11.0
+# decord is imported by scripts/extract_clip_features.py for video frame
+# sampling but was NOT installed in the analysis environment at audit time,
+# so its version is unverified. See REPO_AUDIT.md.
+decord
+
+# mne-icalabel requires a torch backend. onnxruntime is an alternative
+# backend if torch is unavailable on the target platform.
