@@ -313,8 +313,8 @@ evidence; the encoding numbers, confirmed to come from the banded run; no
 hardcoded absolute paths; and no participant-level phenotype data redistributed
 here, only subject IDs.
 
-The remaining items are not code. A human must choose and add a LICENSE file, and
-install and pin `decord` if the Figure 5B encoding analysis is to be run. Two
+The MIT License has since been added, so the one remaining code-adjacent item is
+to install and pin `decord` if the Figure 5B encoding analysis is to be run. Two
 smaller items carry over: Figure 1 is an external schematic with no source file,
 and the manuscript should be corrected to say the Test B male template was size
 matched to 378 for three movies and 377 for The Present, not 377 throughout.

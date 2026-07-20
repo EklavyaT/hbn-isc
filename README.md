@@ -13,13 +13,11 @@ frequency-band decomposition, two validity gates (same-sex templates and ocular
 artifact), the statistics, and the figure and table generation. It contains no
 data.
 
-The pipeline reproduces every manuscript table and figure from the public HBN
-data. The six intermediate builder scripts were each verified to regenerate their
-original file exactly, and the resting-state branch used by Figure 2 and Table 2
-has its producer included. What is not fully scripted is data acquisition: the
-download helper covers only part of what the pipeline needs, as described under
-"Data" and "Known gaps". `REPO_AUDIT.md` holds the full audit and verification
-results.
+The pipeline runs end to end from a clean clone: the download helper fetches every
+input from the public S3 bucket, every subject list ships and is regenerable, and
+the six intermediate builder scripts were each verified to regenerate their
+original file exactly. `REPO_AUDIT.md` holds the full audit, including which
+stages were verified by execution and which by dependency tracing.
 
 ## Data
 
@@ -469,10 +467,11 @@ and reproduce the exact subsamples used in the paper.
 
 ## License
 
-There is **no LICENSE file in this repository**. One should be added before public
-release. A permissive license such as MIT is the usual choice for research code of
-this kind, but the decision rests with the author and the institution, so no
-license file has been created here.
+Released under the MIT License. See [LICENSE](LICENSE) for the full text.
+
+The license covers the code in this repository only. The HBN-EEG data is
+distributed separately by the Child Mind Institute under its own terms, and none
+of it is redistributed here.
 
 ## Citation
 
